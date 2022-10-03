@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Movie 1",
+    "genre": "Action",
+    "releaseYear": 2010
+  },
+  {
+    "id": 2,
+    "name": "Movie 2",
+    "genre": "Comedy",
+    "releaseYear": 2017
+  },
+  {
+    "id": 3,
+    "name": "Movie 3",
+    "genre": "Drama",
+    "releaseYear": 2021
+  },
+  {
+    "id": 4,
+    "name": "Movie 4",
+    "genre": "Horror",
+    "releaseYear": 2022
+  }
+]
