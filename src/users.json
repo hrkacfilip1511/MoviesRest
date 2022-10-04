@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Movie 1",
+    "role": "r"
+  },
+  {
+    "id": 2,
+    "name": "Movie 2",
+    "role": "r/w"
+  },
+  {
+    "id": 3,
+    "name": "Movie 3",
+    "role": "w"
+  },
+  {
+    "id": 4,
+    "name": "Movie 4",
+    "role": "w"
+  }
+]

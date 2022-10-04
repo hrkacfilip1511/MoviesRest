@@ -1,37 +1,36 @@
-import classes from "./Movie.module.css";
+import classes from "./User.module.css";
 import { FaPen, FaTrash } from "react-icons/fa";
 import { useState } from "react";
 import Modal from "../Modal/Modal";
-import EditMovie from "./EditMovie";
-const Movie = (props) => {
+import EditUser from "./EditUser";
+const User = (props) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const editMovie = (e) => {
+  const editUser = (e) => {
     console.log(e.target.value);
     setModalOpen(true);
   };
-  const deleteMovie = (id) => {
+  const deleteUser = (id) => {
     console.log(id);
   };
   return (
-    <div className={classes.movieRow}>
+    <div className={classes.userRow}>
       {isModalOpen && (
         <Modal setModalOpen={setModalOpen}>
-          <EditMovie setModalOpen={setModalOpen} />
+          <EditUser setModalOpen={setModalOpen} />
         </Modal>
       )}
       <span>{props.name}</span>
-      <span>{props.genre}</span>
-      <span>{props.releaseYear}</span>
+      <span>{props.role}</span>
       <div className={classes.actions}>
-        <button className={classes.editBtn} onClick={editMovie}>
+        <button className={classes.editBtn} onClick={editUser}>
           <FaPen />
         </button>
-        <button className={classes.deleteBtn} onClick={deleteMovie}>
+        <button className={classes.deleteBtn} onClick={deleteUser}>
           <FaTrash />
         </button>
       </div>
     </div>
   );
 };
-export default Movie;
+export default User;

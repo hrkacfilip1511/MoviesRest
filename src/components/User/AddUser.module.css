@@ -1,0 +1,66 @@
+.addUserContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+}
+.userName {
+  margin-top: 20px;
+  width: 60%;
+}
+.userName input {
+  width: 100%;
+  padding: 4px 9px;
+}
+.role {
+  margin-top: 20px;
+  width: 60%;
+}
+.role input {
+  width: 100%;
+  padding: 4px 9px;
+}
+.realeaseYear {
+  margin-top: 20px;
+  width: 60%;
+}
+.realeaseYear input {
+  width: 100%;
+  padding: 4px 9px;
+}
+.action {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 100px;
+  justify-content: space-evenly;
+}
+.submitBtn {
+  cursor: pointer;
+  /* margin-top: 100px; */
+  width: 30%;
+  padding: 8px 15px;
+  border: none;
+  background-color: rgb(14, 167, 60);
+  color: white;
+  border-radius: 4px;
+}
+.cancelBtn {
+  cursor: pointer;
+  width: 30%;
+  padding: 8px 15px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  border-radius: 4px;
+}
+.submitBtn:hover,
+.cancelBtn:hover {
+  opacity: 0.8;
+}
+input:focus {
+  outline: none;
+}

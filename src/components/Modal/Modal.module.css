@@ -1,0 +1,21 @@
+.modal {
+  position: relative;
+  transform: translate(-50%);
+  left: 50%;
+  top: 200px;
+  width: 500px;
+  background-color: aliceblue;
+  height: 500px;
+  color: black;
+  z-index: 10;
+}
+
+.backdrop {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  z-index: 1;
+}
