@@ -12,7 +12,9 @@ const Users = (props) => {
   const addUserHandler = () => {
     setModalOpen(true);
   };
-
+  const searchResults = userDatas.filter(
+    (user) => searchUserValue === user.name.toLowerCase()
+  );
   return (
     <div>
       <Heading />
@@ -27,7 +29,7 @@ const Users = (props) => {
           <input
             value={searchUserValue}
             type="text"
-            placeholder="Search User"
+            placeholder="Search user by name"
             onChange={(e) => setSearchUserValue(e.target.value)}
           />
         </div>
@@ -37,9 +39,15 @@ const Users = (props) => {
             <span>Role</span>
           </div>
 
-          {userDatas.map((user) => {
-            return <User key={user.id} name={user.name} role={user.role} />;
-          })}
+          {searchResults.length > 0
+            ? searchResults.map((result) => {
+                return (
+                  <User key={result.id} name={result.name} role={result.role} />
+                );
+              })
+            : userDatas.map((user) => {
+                return <User key={user.id} name={user.name} role={user.role} />;
+              })}
         </div>
       </div>
     </div>

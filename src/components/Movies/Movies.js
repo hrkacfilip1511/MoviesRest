@@ -13,7 +13,9 @@ const Movies = (props) => {
   const addMovieHandler = () => {
     setModalOpen(true);
   };
-
+  const searchResults = movieDatas.filter(
+    (movie) => searchMovieValue === movie.name.toLowerCase()
+  );
   return (
     <div>
       <Heading />
@@ -28,7 +30,7 @@ const Movies = (props) => {
           <input
             value={searchMovieValue}
             type="text"
-            placeholder="Search movie"
+            placeholder="Search movie by name"
             onChange={(e) => setSearchMovieValue(e.target.value)}
           />
         </div>
@@ -39,16 +41,27 @@ const Movies = (props) => {
             <span>Release year</span>
           </div>
 
-          {movieDatas.map((movie) => {
-            return (
-              <Movie
-                key={movie.id}
-                name={movie.name}
-                genre={movie.genre}
-                releaseYear={movie.releaseYear}
-              />
-            );
-          })}
+          {searchResults.length > 0
+            ? searchResults.map((result) => {
+                return (
+                  <Movie
+                    key={result.id}
+                    name={result.name}
+                    genre={result.genre}
+                    releaseYear={result.releaseYear}
+                  />
+                );
+              })
+            : movieDatas.map((movie) => {
+                return (
+                  <Movie
+                    key={movie.id}
+                    name={movie.name}
+                    genre={movie.genre}
+                    releaseYear={movie.releaseYear}
+                  />
+                );
+              })}
         </div>
       </div>
     </div>
